@@ -283,7 +283,7 @@ namespace NadekoBot.Modules.Utility
 
         [NadekoCommand, Usage, Description, Aliases]
         [RequireContext(ContextType.Guild)]
-        [OwnerOnly]
+        [RequireUserPermission(ChannelPermission.ManageChannels)]
         public async Task SaveChat(int cnt)
         {
             var msgs = new List<IMessage>(cnt);
